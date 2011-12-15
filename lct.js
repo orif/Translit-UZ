@@ -1,4 +1,5 @@
 ﻿// Latin to cyrillic conversion script.
+// Copyright Orif Turaboyev 2011.
 // Usage:
 // 1. Conversion:
 //      var result = t$.convert("Kvarts - bu ko`p uchraydigan minerallardan biri.");
