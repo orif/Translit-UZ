@@ -206,7 +206,8 @@ t$ = window.t$ ||
                         var hasUzbekOnlyLetters = false;
                         var word = this.getWord(s, k, len);
                         if (word != null) {
-                            var translated = this.convert(word.split('ts').join(' '));
+                            var cleanedWord = word.replace('TS', ' ').replace('ts', ' ').replace('Ts', ' ').replace('tS', ' ');
+                            var translated = this.convert(cleanedWord);
                             hasUzbekOnlyLetters = this._containsAnyOf(translated, this._uzbLetters);
                         }
 
