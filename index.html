@@ -11,6 +11,13 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <title>Transliterator--uz- by Orif</title>
+    <script type="text/javascript" src="javascript/lct-min.js" />
+    <script type="text/javascript">
+        function convert() {
+            var origText = document.getElementById('txtInput').value;
+            document.getElementById('txtOutput').value = t$.convert(origText);
+        }
+    </script>
   </head>
 
   <body>
@@ -32,8 +39,17 @@
 
         <section id="main_content">
           <p>Uzbek language has 3 active alphabets. Latin is an official alphabet in Uzbekistan, Cyrillic alphabet is used by Uzbeks of neighboring countries and Arabic alphabet is used by Uzbeks of Afghanistan. So, transliteration over alphabets became actual. The transliteration technique used in this page does not pretend to be perfect, it has several issues with special words (especially with foreign words).</p>
-
-<p>Although the result of transliteration is correct for the most of time, please check for correctness after use.</p>
+          <p>Although the result of transliteration is correct for the most of time, please check for correctness after use.</p>
+          <p>
+            <input type="button" value="Convert" onclick="convert()" />
+          <p>
+            Type your Latin text here:
+            <textarea cols="70" rows="10" id="txtInput"></textarea>
+          </p>
+          <p>
+            Result in Cyrillic:
+            <textarea cols="70" rows="10" id="txtOutput"></textarea>
+          </p>
         </section>
 
         <footer>
