@@ -11,16 +11,20 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script type="text/javascript" src="https://github.com/Orif/Transliterator--UZ-/blob/master/lct.min.js"></script>
+    <script type="text/javascript">
+        function convert() {
+            var origText = document.getElementById('txtInput').value;
+            document.getElementById('txtOutput').value = t$.convert(origText);
+        }
+    </script>
   </head>
   <body>
     <div class="wrapper">
       <header>
         <h1>Transliterator--uz-</h1>
         <p>Transliteration over uzbek alphabets (latin, cyrillic, arabic)</p>
-
         <p class="view"><a href="https://github.com/Orif/Transliterator--UZ-">View the Project on GitHub <small>Orif/Transliterator--UZ-</small></a></p>
-
-
         <ul>
           <li><a href="https://github.com/Orif/Transliterator--UZ-/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/Orif/Transliterator--UZ-/tarball/master">Download <strong>TAR Ball</strong></a></li>
@@ -28,16 +32,20 @@
         </ul>
       </header>
       <section>
-        <p>Uzbek language has 3 active alphabets. Latin is an official alphabet in Uzbekistan, Cyrillic alphabet is used by Uzbeks of neighboring countries and Arabic alphabet is used by Uzbeks of Afghanistan. So, transliteration over alphabets became actual. The transliteration technique used in this page does not pretend to be perfect, it has several issues with special words (especially with foreign words).</p>
-
+<p>Uzbek language has 3 active alphabets. Latin is an official alphabet in Uzbekistan, Cyrillic alphabet is used by Uzbeks of neighboring countries and Arabic alphabet is used by Uzbeks of Afghanistan. So, transliteration over alphabets became actual. The transliteration technique used in this page does not pretend to be perfect, it has several issues with special words (especially with foreign words).</p>
 <p>Although the result of transliteration is correct for the most of time, please check for correctness after use.</p>
+<p>
+<input type="button" onclick="convert()" />
+<textarea cols="80" rows="5" id="txtInput"></textarea>
+<br/>
+<textarea cols="80" rows="5" id="txtOutput"></textarea>
+</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/Orif">Orif</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+    <script src="javascripts/scale.fix.js"></script>    
   </body>
 </html>
