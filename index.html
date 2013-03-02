@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Transliterator--uz- by Orif</title>
+    <title>Transliterator (uz) by Orif</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -11,6 +11,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script src="javascripts/main.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -28,9 +29,22 @@
         </ul>
       </header>
       <section>
-        <p>Uzbek language has 3 active alphabets. Latin is an official alphabet in Uzbekistan, Cyrillic alphabet is used by Uzbeks of neighboring countries and Arabic alphabet is used by Uzbeks of Afghanistan. So, transliteration over alphabets became actual. The transliteration technique used in this page does not pretend to be perfect, it has several issues with special words (especially with foreign words).</p>
-
-<p>Although the result of transliteration is correct for the most of time, please check for correctness after use.</p>
+        <p>Uzbek language has 3 active alphabets. Latin is an official alphabet in Uzbekistan, Cyrillic alphabet is using by Uzbeks of neighboring countries. Also Arabic alphabet is using by Uzbeks of Afghanistan. Hence transliteration over alphabets became actual. The transliteration technique used in this page does not pretend to be perfect, it has several issues with special words (especially with foreign words).</p>
+                <p>Arabic alphabet is not supported yet, hope it will be added soon.</p>
+                <p>Although the result of transliteration is correct for the most of time, please check for correctness after use.</p>
+                <p>The below widget is a sample for the script (it converts Latin text to Cyrillic):</p>
+                <p>
+                    <input type="radio" name="to" value="Latin to Cyrillic" /><input type="radio" name="to" value="Cyrillic to Latin" /></p>
+                <p>
+                    <input type="button" value="Convert" onclick="document.getElementById('txtOutput').value = t$.convert(document.getElementById('txtInput').value);" />
+                <p>
+                    Type your text here:
+  		<textarea cols="70" rows="10" id="txtInput"></textarea>
+                </p>
+                <p>
+                    Result:
+			<textarea cols="70" rows="10" id="txtOutput"></textarea>
+                </p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/Orif">Orif</a></p>
