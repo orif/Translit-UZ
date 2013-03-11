@@ -1,57 +1,75 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Transliterator (uz) by Orif</title>
 
+    <link rel="stylesheet" href="stylesheets/toast.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="javascripts/main.js"></script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Transliterator--uz-</h1>
-        <p>Transliteration over uzbek alphabets (latin, cyrillic, arabic)</p>
-
-        <p class="view"><a href="https://github.com/Orif/Translit-UZ">View the Project on GitHub <small>Orif/Translit-UZ</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/Orif/Translit-UZ/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/Orif/Translit-UZ/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/Orif/Translit-UZ">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p>Uzbek language has 3 active alphabets. Latin is an official alphabet in Uzbekistan, Cyrillic alphabet is using by Uzbeks of neighboring countries. Also Arabic alphabet is using by Uzbeks of Afghanistan. Hence transliteration over alphabets became actual. The transliteration technique used in this page does not pretend to be perfect, it has several issues with special words (especially with foreign words).</p>
-                <p>Arabic alphabet is not supported yet, hope it will be added soon.</p>
-                <p>Although the result of transliteration is correct for the most of time, please check for correctness after use.</p>
+</head>
+<body>
+    <div class="wrap">
+        <div class="grids">
+            <div class="grid-7">
                 <p>The below widget is a sample for the script:</p>
                 <p>
-                    <label><input type="radio" name="to" />Latin to Cyrillic</label> <label><input type="radio" name="to" value="Cyrillic to Latin" />Cyrillic to Latin</label></p>
+                    <label>
+                        <input type="radio" name="to" checked="checked" />&nbsp;Latin to Cyrillic</label>
+                    &nbsp;&nbsp;
+                    <label>
+                        <input type="radio" name="to" disabled="disabled" title="Not supported yet.." />&nbsp;Cyrillic to Latin</label>
+                </p>
                 <p>
                     <input type="button" value="Convert" onclick="document.getElementById('txtOutput').value = t$.convert(document.getElementById('txtInput').value);" />
-                <p>
-                    Type your text here:
-  		<textarea cols="70" rows="10" id="txtInput"></textarea>
                 </p>
                 <p>
-                    Result:
-			<textarea cols="70" rows="10" id="txtOutput"></textarea>
+                    Type your text here:<br />
+                    <textarea id="txtInput" rows="10" style="width: 100%;"></textarea>
                 </p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/Orif">Orif</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+                <p>
+                    Result:<br />
+                    <textarea id="txtOutput" rows="10" style="width: 100%;"></textarea>
+                </p>
+            </div>
+            <div class="grid-5">
+                <header>
+                    <!--<h1>Transliterator (uz)</h1>
+                    <p>Transliteration over uzbek alphabets (latin, cyrillic, arabic)</p>-->
+                    <p class="view"><a href="https://github.com/Orif/Translit-UZ">View the Project on GitHub <small>Orif/Translit-UZ</small></a></p>
+                    <ul>
+                        <li><a href="https://github.com/Orif/Translit-UZ/zipball/master">Download <strong>ZIP File</strong></a></li>
+                        <li><a href="https://github.com/Orif/Translit-UZ/tarball/master">Download <strong>TAR Ball</strong></a></li>
+                        <li><a href="https://github.com/Orif/Translit-UZ">View On <strong>GitHub</strong></a></li>
+                    </ul>
+                </header>
+                <hr />
+                <div>
+                    <p>Uzbek language has 3 active alphabets. Latin is an official alphabet in Uzbekistan, Cyrillic alphabet is using by Uzbeks of neighboring countries. Also Arabic alphabet is using by Uzbeks of Afghanistan. Hence transliteration over alphabets became actual. The transliteration technique used in this page does not pretend to be perfect, it has several issues with special words (especially with foreign words).</p>
+                    <p>Although the result of transliteration is correct for the most of time, please check for correctness after use.</p>
+                    <p>Arabic alphabet is not supported yet, hope it will be added soon.</p>
+                </div>
+            </div>
+        </div>
+        <hr />
+        Usage:
+        <pre>
+<span style="color:blue;">&lt;</span><span style="color:maroon;">input</span>&nbsp;<span style="color:red;">type</span><span style="color:blue;">=&quot;button&quot;</span>&nbsp;<span style="color:red;">value</span><span style="color:blue;">=&quot;Convert&quot;</span>&nbsp;<span style="color:red;">onclick</span><span style="color:blue;">=&quot;return</span>&nbsp;convert();<span style="color:blue;">&quot;</span>&nbsp;<span style="color:blue;">/&gt;</span>
+Type your text here:
+<span style="color:blue;">&lt;</span><span style="color:maroon;">textarea</span>&nbsp;<span style="color:red;">id</span><span style="color:blue;">=&quot;txtInput&quot;&gt;&lt;/</span><span style="color:maroon;">textarea</span><span style="color:blue;">&gt;</span>
+Result:
+<span style="color:blue;">&lt;</span><span style="color:maroon;">textarea</span>&nbsp;<span style="color:red;">id</span><span style="color:blue;">=&quot;txtOutput&quot;&gt;&lt;/</span><span style="color:maroon;">textarea</span><span style="color:blue;">&gt;</span>
+<span style="color:blue;">&lt;</span><span style="color:maroon;">script</span>&nbsp;<span style="color:red;">type</span><span style="color:blue;">=&quot;text/javascript&quot;</span>&nbsp;<span style="color:red;">src</span><span style="color:blue;">=&quot;javascripts/lct.min.js&quot;&gt;&lt;/</span><span style="color:maroon;">script</span><span style="color:blue;">&gt;</span>
+<span style="color:blue;">&lt;</span><span style="color:maroon;">script</span>&nbsp;<span style="color:red;">type</span><span style="color:blue;">=&quot;text/javascript&quot;&gt;</span>
+&nbsp;&nbsp;<span style="color:blue;">function</span>&nbsp;convert()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;$(<span style="color:#a31515;">&#39;#txtOutput&#39;</span>).val(t$.convert($(<span style="color:#a31515;">&#39;#txtInput&#39;</span>).val()));
+&nbsp;&nbsp;}
+<span style="color:blue;">&lt;/</span><span style="color:maroon;">script</span><span style="color:blue;">&gt;</span></pre>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+</body>
 </html>

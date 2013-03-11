@@ -7,7 +7,7 @@ body {
   font-weight:300;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/*h1, h2, h3, h4, h5, h6 {
   color:#222;
   margin:0 0 20px;
 }
@@ -30,7 +30,7 @@ h2 {
 
 h3, h4, h5, h6 {
   color:#494949;
-}
+}*/
 
 a {
   color:#39c;
@@ -71,7 +71,7 @@ pre {
   overflow-x: auto;
 }
 
-table {
+/*table {
   width:100%;
   border-collapse:collapse;
 }
@@ -89,16 +89,10 @@ dt {
 
 th {
   color:#444;
-}
+}*/
 
 img {
   max-width:100%;
-}
-
-header {
-  width:270px;
-  float:left;
-  position:fixed;
 }
 
 header ul {
@@ -157,12 +151,6 @@ header ul a strong {
   font-size:14px;
   display:block;
   color:#222;
-}
-
-section {
-  width:500px;
-  float:right;
-  padding-bottom:50px;
 }
 
 small {
